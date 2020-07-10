@@ -29,8 +29,7 @@ def call(String command) {
             }
         }
     }
-    else
-    {
+    else {
         pipeline {
             agent any
             stages

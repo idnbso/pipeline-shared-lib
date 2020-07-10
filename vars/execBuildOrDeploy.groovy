@@ -14,7 +14,7 @@ def call(String command) {
             }
         }
     }
-    elseif (command == 'deploy') {
+    else if (command == 'deploy') {
         pipeline {
             agent any
             stages
@@ -29,8 +29,7 @@ def call(String command) {
             }
         }
     }
-    else
-    {
+    else {
         pipeline {
             agent any
             stages

@@ -59,5 +59,3 @@ class VersionStructure {
         return incrementedVersionNumber
     }
 }
-
-return this

@@ -1,12 +1,6 @@
 package org.util
 
-ArrayList<String> getACMReportsIncrementedVersion() {
-    // Read local stored version json file and deserialize to an object
-    final jsonFileName = 'version.json'
-    final versionFileText = readFile(jsonFileName)
-    final versionFile = new groovy.json.JsonSlurperClassic().parseText(versionFileText)
-    final versionBuildNumber = versionFile.build_version
-
+ArrayList<String> getACMReportsIncrementedVersion(versionBuildNumber) {
     println "Current Version: ${versionBuildNumber}"
 
     final acmVersionStructure = new VersionStructure(

@@ -48,7 +48,9 @@ class VersionStructure {
 
         final versionNumbers = versionBuildNumber.tokenize(numberSeparatorToken)
         final versionNumber = versionNumbers[subVersionPosition] as int
+        
         versionNumbers[subVersionPosition] = versionNumber + 1
+        versionNumbers = versionNumbers.collection { it > subVersionPosition ? 0 : it }
 
         final incrementedVersionNumber = versionNumbers.join(numberSeparatorToken)
 

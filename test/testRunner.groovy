@@ -1,7 +1,3 @@
-package org.util
-
-import org.util.VersionStructureTests
-
 def runTestSuite() {
     println "\t\t\t##############################################"
     println "\t\t\t### ACM Reports DevOps Scripts Test Runner ###"

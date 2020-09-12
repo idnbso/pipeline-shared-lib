@@ -1,7 +1,3 @@
-package org.util
-
-import org.util.VersionStructure
-
 class VersionStructureTests {
     def getVersionFormat_ValidVersionFormat_ReturnsValidResult() {
         // Arrange

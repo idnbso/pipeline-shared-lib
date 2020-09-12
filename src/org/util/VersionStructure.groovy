@@ -50,7 +50,7 @@ class VersionStructure {
         final versionNumber = versionNumbers[subVersionPosition] as int
         
         versionNumbers[subVersionPosition] = versionNumber + 1
-        versionNumbers = versionNumbers.collect { (it as int) > subVersionPosition ? '0' : it }
+        versionNumbers = versionNumbers.withIndex().collect { element, index -> index > subVersionPosition ? '0' : element }
 
         final incrementedVersionNumber = versionNumbers.join(numberSeparatorToken)
 
